@@ -8,10 +8,10 @@ fi
 
 # set the postgres database host, port, user and password according to the environment
 # and pass them as arguments to the odoo process if not present in the config file
-: ${HOST:=${DB_PORT_5432_TCP_ADDR:='db'}}
+: ${HOST:=${DB_PORT_5432_TCP_ADDR:='postgres://knowledge_base_user:15zMjF1R84H0K2n28ujw5MjwDyMdvtll@dpg-cifugpdph6erq6hj3g1g-a.frankfurt-postgres.render.com/knowledge_base'}}
 : ${PORT:=${DB_PORT_5432_TCP_PORT:=5432}}
-: ${USER:=${DB_ENV_POSTGRES_USER:=${POSTGRES_USER:='odoo'}}}
-: ${PASSWORD:=${DB_ENV_POSTGRES_PASSWORD:=${POSTGRES_PASSWORD:='odoo'}}}
+: ${USER:=${DB_ENV_POSTGRES_USER:=${POSTGRES_USER:='knowledge_base_user'}}}
+: ${PASSWORD:=${DB_ENV_POSTGRES_PASSWORD:=${POSTGRES_PASSWORD:='15zMjF1R84H0K2n28ujw5MjwDyMdvtll'}}}
 
 DB_ARGS=()
 function check_config() {
